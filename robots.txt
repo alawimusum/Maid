@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://maid-qarni.github.io/sitemap.xml
