@@ -168,22 +168,32 @@
       </div>
     </div>
 
-    <!-- القائمة الجانبية للهواتف -->
-    <div id="mobile-menu" class="fixed inset-y-0 right-0 w-full max-w-xs bg-white z-40 transform translate-x-full transition-transform duration-500 ease-in-out shadow-2xl border-l border-gray-100 flex flex-col pt-24 px-6 gap-6">
-      <a href="#hero" class="mobile-link text-brand-navy hover:text-brand-gold font-bold text-base py-2 border-b border-gray-100">الرئيسية</a>
-      <a href="#about" class="mobile-link text-brand-navy hover:text-brand-gold font-bold text-base py-2 border-b border-gray-100">من نحن</a>
-      <a href="#hospitality" class="mobile-link text-brand-navy hover:text-brand-gold font-bold text-base py-2 border-b border-gray-100">خدمات الفنادق والسكن</a>
-      <a href="#wedding-halls" class="mobile-link text-brand-navy hover:text-brand-gold font-bold text-base py-2 border-b border-gray-100">قاعات الأفراح والمناسبات</a>
-      <a href="#other-sectors" class="mobile-link text-brand-navy hover:text-brand-gold font-bold text-base py-2 border-b border-gray-100">قطاعاتنا الأخرى</a>
-      <a href="#booking-contact" class="mobile-link text-brand-navy hover:text-brand-gold font-bold text-base py-2 border-b border-gray-100">تواصل معنا</a>
-      
-      <a href="#booking-contact" class="mobile-link mt-6 px-6 py-3 rounded-xl bg-gold-gradient text-white text-center font-bold shadow-lg shadow-brand-gold/15 transition-all duration-300">
-        احجز قاعتك / سكنك الآن
-      </a>
-    </div>
-    <!-- خلفية شبه شفافة عند فتح القائمة -->
-    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-30 hidden backdrop-blur-sm transition-opacity duration-500 opacity-0"></div>
   </header>
+
+  <!-- القائمة الجانبية للهواتف -->
+  <div id="mobile-menu" class="fixed inset-y-0 right-0 w-full max-w-xs bg-white z-[100] transform translate-x-full transition-transform duration-500 ease-in-out shadow-2xl border-l border-gray-100 flex flex-col pt-6 px-6 gap-6 font-cairo">
+    <!-- رأس القائمة للهواتف مع زر إغلاق -->
+    <div class="flex items-center justify-between pb-4 border-b border-gray-100">
+      <span class="text-brand-navy font-bold text-sm">قائمة التنقل</span>
+      <button id="close-mobile-menu" class="text-brand-navy hover:text-brand-gold text-lg focus:outline-none p-1.5 rounded-lg bg-gray-50 border border-gray-100" aria-label="إغلاق القائمة">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="flex flex-col gap-4">
+      <a href="#hero" class="mobile-link text-brand-navy hover:text-brand-gold font-bold text-base py-3 border-b border-gray-50 transition-colors duration-300">الرئيسية</a>
+      <a href="#about" class="mobile-link text-brand-navy hover:text-brand-gold font-bold text-base py-3 border-b border-gray-50 transition-colors duration-300">من نحن</a>
+      <a href="#hospitality" class="mobile-link text-brand-navy hover:text-brand-gold font-bold text-base py-3 border-b border-gray-50 transition-colors duration-300">خدمات الفنادق والسكن</a>
+      <a href="#wedding-halls" class="mobile-link text-brand-navy hover:text-brand-gold font-bold text-base py-3 border-b border-gray-50 transition-colors duration-300">قاعات الأفراح والمناسبات</a>
+      <a href="#other-sectors" class="mobile-link text-brand-navy hover:text-brand-gold font-bold text-base py-3 border-b border-gray-50 transition-colors duration-300">قطاعاتنا الأخرى</a>
+      <a href="#booking-contact" class="mobile-link text-brand-navy hover:text-brand-gold font-bold text-base py-3 border-b border-gray-50 transition-colors duration-300">تواصل معنا</a>
+    </div>
+    
+    <a href="#booking-contact" class="mobile-link mt-auto mb-6 px-6 py-3.5 rounded-xl bg-gold-gradient text-white text-center font-bold shadow-lg shadow-brand-gold/15 transition-all duration-300">
+      احجز قاعتك / سكنك الآن
+    </a>
+  </div>
+  <!-- خلفية تعتيم شبه شفافة عند فتح القائمة -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-[90] hidden backdrop-blur-sm transition-opacity duration-500 opacity-0"></div>
 
   <!-- 2. القسم الرئيسي (Hero Section) -->
   <section id="hero" class="relative min-h-screen bg-light-gold-gradient flex items-center pt-28 pb-16 overflow-hidden z-10">
@@ -716,6 +726,29 @@
           <p class="text-gray-400 text-xs md:text-sm leading-relaxed font-light">
             شركة استثمارية وخدمية سعودية كبرى، تقدم منظومة إقامة فندقية وسكنية فاخرة، وصالات وقصور للمناسبات الراقية والمقاولات العامة بمستويات احترافية متكاملة.
           </p>
+          
+          <!-- قسم خاص لأيقونات التواصل الاجتماعي والواتساب -->
+          <div class="flex flex-col gap-3 mt-4">
+            <span class="text-xs text-gray-400 font-bold">تابعنا وتواصل معنا:</span>
+            <div class="flex items-center gap-3">
+              <!-- واتساب البارز والمميز -->
+              <a href="https://wa.me/966555595492" target="_blank" class="w-12 h-12 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center text-2xl hover:scale-110 transition-all duration-300 shadow-lg shadow-emerald-500/20" title="تواصل معنا فوراً عبر واتساب">
+                <i class="fa-brands fa-whatsapp animate-pulse"></i>
+              </a>
+              <!-- تويتر / X -->
+              <a href="https://x.com" target="_blank" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 text-gray-300 hover:text-brand-gold hover:border-brand-gold/50 flex items-center justify-center text-base hover:scale-105 transition-all duration-300" title="تويتر X">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <!-- إنستغرام -->
+              <a href="https://instagram.com" target="_blank" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 text-gray-300 hover:text-brand-gold hover:border-brand-gold/50 flex items-center justify-center text-base hover:scale-105 transition-all duration-300" title="إنستغرام">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <!-- لينكد إن -->
+              <a href="https://linkedin.com" target="_blank" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 text-gray-300 hover:text-brand-gold hover:border-brand-gold/50 flex items-center justify-center text-base hover:scale-105 transition-all duration-300" title="لينكد إن">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
         <!-- روابط تنقل سريعة مجهزة بالمسميات الجديدة -->
@@ -728,6 +761,7 @@
               <li><a href="#hospitality" class="text-gray-400 hover:text-brand-gold transition-colors">خدمات الفنادق والسكن</a></li>
               <li><a href="#wedding-halls" class="text-gray-400 hover:text-brand-gold transition-colors">قاعات الأفراح والمناسبات</a></li>
               <li><a href="#booking-contact" class="text-gray-400 hover:text-brand-gold transition-colors">حجز خدمة وتواصل معنا</a></li>
+              <li><a href="javascript:void(0)" id="privacy-policy-quicklink" class="text-gray-400 hover:text-brand-gold transition-colors">سياسة الخصوصية</a></li>
             </ul>
           </div>
         </div>
@@ -754,13 +788,15 @@
       </div>
 
       <!-- لوحة الحقوق والتوثيق القانوني للموقع -->
-      <div class="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 text-center text-xs text-gray-500">
-        <p>جميع الحقوق محفوظة © 2026 لشركة معيض علي بن معيض القرني التجارية.</p>
-        <div class="flex items-center gap-4">
+      <div class="flex flex-col items-center justify-center gap-4 pt-8 text-center text-xs text-gray-400 border-t border-white/5 mt-8">
+        <div class="flex flex-wrap justify-center items-center gap-3 md:gap-4 font-bold text-white text-sm md:text-base mb-2">
+          <a href="javascript:void(0)" id="privacy-policy-btn" class="hover:text-brand-gold transition-colors underline cursor-pointer">سياسة الخصوصية</a>
+          <span class="text-white/30 font-light">|</span>
           <span>الرقم الوطني الموحد: 7010327133</span>
-          <span class="text-gray-600">|</span>
+          <span class="text-white/30 font-light">|</span>
           <span>تصميم وتنفيذ رسمي معتمد</span>
         </div>
+        <p class="font-medium text-gray-400 text-xs">جميع الحقوق محفوظة © 2026 لشركة معيض علي بن معيض القرني التجارية.</p>
       </div>
 
     </div>
@@ -770,6 +806,80 @@
   <button id="back-to-top" class="fixed bottom-6 left-6 w-12 h-12 rounded-full bg-gold-gradient text-white flex items-center justify-center shadow-lg shadow-brand-gold/20 opacity-0 invisible translate-y-4 hover:translate-y-0 hover:scale-105 transition-all duration-500 z-50" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="العودة للأعلى">
     <i class="fa-solid fa-arrow-up text-lg"></i>
   </button>
+
+  <!-- نافذة منبثقة لسياسة الخصوصية (Privacy Policy Modal) -->
+  <div id="privacy-modal" class="fixed inset-0 bg-brand-navyDark/60 backdrop-blur-sm z-[100] hidden items-center justify-center p-4 transition-all duration-300 opacity-0">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[80vh] flex flex-col border-2 border-brand-gold/30 shadow-2xl overflow-hidden animate-fade-in-up">
+      <!-- رأس المودال -->
+      <div class="bg-brand-navy text-white px-6 py-4 flex items-center justify-between border-b border-brand-gold/20">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-user-shield text-brand-gold text-lg"></i>
+          <h3 class="font-bold text-sm md:text-base">سياسة الخصوصية – شركة معيض علي بن معيض القرني التجارية</h3>
+        </div>
+        <button id="close-privacy-modal-x" class="text-gray-400 hover:text-brand-gold text-lg focus:outline-none" aria-label="إغلاق">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <!-- محتوى المودال (قابل للتمرير) -->
+      <div class="p-6 md:p-8 overflow-y-auto text-right text-slate-700 text-xs md:text-sm leading-relaxed space-y-4 font-bold">
+        <div class="text-brand-gold text-xs font-bold border-b border-gray-100 pb-2">تاريخ السريان: 21 يونيو 2026</div>
+        <p>
+          شركة معيض علي بن معيض القرني التجارية تحترم خصوصيتك وتلتزم بحماية بياناتك الشخصية عند استخدامك لموقعنا أو خدماتنا. توضح هذه الصفحة كيفية جمع واستخدام وحماية معلوماتك، وحقوقك المتعلقة بها.
+        </p>
+
+        <h4 class="text-brand-navy font-black text-sm border-r-2 border-brand-gold pr-2 mt-4">1. المعلومات التي نجمعها</h4>
+        <p>قد نقوم بجمع البيانات التالية اختياريّاً عند تعبئة نموذج الحجز:</p>
+        <ul class="list-disc list-inside pr-4 space-y-1">
+          <li>الاسم الكامل.</li>
+          <li>رقم الجوال للتواصل.</li>
+          <li>نوع الخدمة المطلوبة (حجز فندقي وسكن / حجز قاعة مناسبات / خدمات المقاولات والصيانة).</li>
+          <li>أي تفاصيل إضافية تكتبها في نص الرسالة.</li>
+        </ul>
+
+        <h4 class="text-brand-navy font-black text-sm border-r-2 border-brand-gold pr-2 mt-4">2. استخدام المعلومات</h4>
+        <p>نستخدم بياناتك فقط للأغراض التالية:</p>
+        <ul class="list-disc list-inside pr-4 space-y-1">
+          <li>التواصل معك بشأن الحجوزات، والخدمات، والاستفسارات المقدمة من طرفك.</li>
+          <li>تنسيق طلبات الإقامة الفندقية أو حجز قاعات الأفراح والمناسبات الفاخرة.</li>
+          <li>الامتثال للقوانين واللوائح المعمول بها في المملكة العربية السعودية.</li>
+        </ul>
+
+        <h4 class="text-brand-navy font-black text-sm border-r-2 border-brand-gold pr-2 mt-4">3. مشاركة المعلومات مع الغير</h4>
+        <p>
+          نحن لا نبيع، ولا نؤجر، ولا نشارك بياناتك الشخصية مع أي طرف ثالث لأغراض تجارية مطلقاً. قد نشارك معلوماتك فقط إذا كان ذلك مطلوبًا بموجب الأنظمة والقوانين الرسمية.
+        </p>
+
+        <h4 class="text-brand-navy font-black text-sm border-r-2 border-brand-gold pr-2 mt-4">4. حماية البيانات</h4>
+        <p>
+          نطبق تدائير أمنية تقنية وتنظيمية لحماية بياناتك من الوصول غير المصرح به، أو التعديل، أو الكشف، أو الحذف، لضمان تجربة تصفح وحجز آمنة بالكامل.
+        </p>
+
+        <h4 class="text-brand-navy font-black text-sm border-r-2 border-brand-gold pr-2 mt-4">5. حقوقك</h4>
+        <p>لك الحق في:</p>
+        <ul class="list-disc list-inside pr-4 space-y-1">
+          <li>الوصول إلى بياناتك الشخصية التي شاركتها معنا.</li>
+          <li>طلب تصحيح أو تحديث معلوماتك.</li>
+          <li>طلب حذف بياناتك من سجلات التواصل لدينا.</li>
+        </ul>
+        <p class="mt-2">
+          لممارسة حقوقك أو للاستفسار، يمكنك التواصل معنا مباشرة عبر:<br>
+          البريد الإلكتروني: <a href="mailto:bibo335@gmail.com" class="text-brand-gold hover:underline font-mono">bibo335@gmail.com</a><br>
+          الهاتف: <a href="tel:0555595492" class="text-brand-gold hover:underline font-mono">0555595492</a>
+        </p>
+
+        <h4 class="text-brand-navy font-black text-sm border-r-2 border-brand-gold pr-2 mt-4">6. التغييرات على سياسة الخصوصية</h4>
+        <p>
+          قد نقوم بتحديث هذه السياسة من وقت لآخر لمواكبة التحديثات التنظيمية، وسيتم نشر أي تغييرات مباشرة على هذه الصفحة.
+        </p>
+      </div>
+      <!-- أسفل المودال (الزر) -->
+      <div class="bg-gray-50 px-6 py-4 flex justify-end border-t border-gray-100">
+        <button id="close-privacy-modal-btn" class="px-6 py-2 bg-brand-navy hover:bg-brand-navy/90 text-white font-bold rounded-lg text-sm transition-all focus:outline-none">
+          إغلاق
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- تضمين كود الجافا سكربت المحدث للموقع -->
   <script src="./script.js"></script>

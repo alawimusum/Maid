@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+    const closeMobileMenuBtn = document.getElementById('close-mobile-menu');
     const mobileLinks = document.querySelectorAll('.mobile-link');
 
     function toggleMobileMenu() {
@@ -66,8 +67,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
-    mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    }
+    if (mobileMenuOverlay) {
+        mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
+    }
+    if (closeMobileMenuBtn) {
+        closeMobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    }
     
     // إغلاق القائمة عند النقر على أي رابط من روابطها
     mobileLinks.forEach(link => {
@@ -98,6 +106,59 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.classList.add('text-brand-gold');
             }
         });
+    });
+
+    // 3.5. نافذة سياسة الخصوصية المنبثقة (Privacy Policy Modal Logic)
+    const privacyModal = document.getElementById('privacy-modal');
+    const privacyPolicyBtn = document.getElementById('privacy-policy-btn');
+    const privacyPolicyQuickLink = document.getElementById('privacy-policy-quicklink');
+    const closePrivacyModalBtn = document.getElementById('close-privacy-modal-btn');
+    const closePrivacyModalX = document.getElementById('close-privacy-modal-x');
+
+    function openPrivacyModal() {
+        // Make sure modal has correct z-index above everything
+        privacyModal.classList.remove('hidden');
+        privacyModal.classList.add('flex');
+        setTimeout(() => {
+            privacyModal.classList.remove('opacity-0');
+        }, 10);
+    }
+
+    function closePrivacyModal() {
+        privacyModal.classList.add('opacity-0');
+        setTimeout(() => {
+            privacyModal.classList.add('hidden');
+            privacyModal.classList.remove('flex');
+        }, 300);
+    }
+
+    if (privacyPolicyBtn) {
+        privacyPolicyBtn.addEventListener('click', openPrivacyModal);
+    }
+    if (privacyPolicyQuickLink) {
+        privacyPolicyQuickLink.addEventListener('click', openPrivacyModal);
+    }
+    if (closePrivacyModalBtn) {
+        closePrivacyModalBtn.addEventListener('click', closePrivacyModal);
+    }
+    if (closePrivacyModalX) {
+        closePrivacyModalX.addEventListener('click', closePrivacyModal);
+    }
+
+    // إغلاق المودال عند النقر على الخلفية الشبه شفافة
+    if (privacyModal) {
+        privacyModal.addEventListener('click', (e) => {
+            if (e.target === privacyModal) {
+                closePrivacyModal();
+            }
+        });
+    }
+
+    // إغلاق المودال عند الضغط على زر Escape في لوحة المفاتيح
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && privacyModal && !privacyModal.classList.contains('hidden')) {
+            closePrivacyModal();
+        }
     });
 });
 
