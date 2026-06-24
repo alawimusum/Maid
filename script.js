@@ -269,3 +269,27 @@ function handleFormSubmit(event) {
         
     }, 1200);
 }
+
+// 6. معالجة إرسال نموذج صفحة الحجز وإظهار تنبيه بوابة الدفع
+function handleBookingSubmit(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('booking-name').value.trim();
+    const phone = document.getElementById('booking-phone').value.trim();
+    const packageVal = document.getElementById('booking-package').value;
+    const dateVal = document.getElementById('booking-date').value;
+    
+    // التحقق من أن جميع القيم المطلوبة متوفرة
+    if (!name || !phone || !packageVal || !dateVal) {
+        alert('يرجى تعبئة جميع الحقول المطلوبة.');
+        return;
+    }
+    
+    // استدعاء دالة فتح المودال المعرفة في الصفحة
+    if (typeof openPaymentModal === 'function') {
+        openPaymentModal(name, phone, packageVal, dateVal);
+    } else {
+        // رسالة احتياطية في حال تعذر العثور على الدالة
+        alert(`بوابة الدفع الإلكتروني قيد التفعيل الفني حالياً مع المصرف.\n\nتم تسجيل حجزك باسم: ${name}\nباقة: ${packageVal}`);
+    }
+}

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بوابة الحجز الإلكتروني | شركة معيض علي بن معيض القرني التجارية</title>
+  
+  <!-- SEO & Search Engine Optimization Tags -->
+  <meta name="description" content="نموذج وبوابة الحجز الإلكتروني لخدمات الضيافة والإقامة الفندقية وصالات الأفراح والمناسبات لشركة معيض علي بن معيض القرني التجارية.">
+  <meta name="robots" content="noindex, nofollow">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Google Fonts: Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0F2C59',      /* الكحلي الملكي الفاخر */
+              navyDark: '#0A1E3F',  /* الكحلي الأكثر عمقاً للخلفيات والتذييل */
+              slate: '#1A365D',     /* كحلي متوسط للبطاقات المظلمة */
+              gold: '#B89020',      /* الذهب البرونزي المريح للعين */
+              goldHover: '#9A7516', /* ذهبي متفاعل */
+              goldLight: '#F5E6BE', /* ذهبي فاتح جداً */
+              lightGray: '#F3F4F6', /* رمادي فاتح مريح */
+              bgLight: '#F8FAFC',   /* رمادي أكثر بياضاً للخلفيات */
+              borderGold: 'rgba(184, 144, 32, 0.2)', /* حدود ذهبية خفيفة */
+            }
+          },
+          fontFamily: {
+            cairo: ['Cairo', 'sans-serif'],
+          },
+          animation: {
+            'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+            'float': 'float 4s ease-in-out infinite',
+            'pulse-glow': 'pulseGlow 2s infinite',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            pulseGlow: {
+              '0%, 100%': { boxShadow: '0 0 0 0 rgba(184, 144, 32, 0.4)' },
+              '50%': { boxShadow: '0 0 20px 10px rgba(184, 144, 32, 0)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+    }
+    
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F3F4F6;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #B89020;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #9A7516;
+    }
+
+    .bg-gold-gradient {
+      background: linear-gradient(135deg, #B89020 0%, #9A7516 100%);
+    }
+    .bg-navy-gradient {
+      background: linear-gradient(135deg, #0F2C59 0%, #0A1E3F 100%);
+    }
+    .bg-light-gold-gradient {
+      background: linear-gradient(135deg, #F8FAFC 0%, #FFFFFF 50%, rgba(184, 144, 32, 0.05) 100%);
+    }
+  </style>
+</head>
+<body class="bg-brand-bgLight text-slate-800 antialiased overflow-x-hidden min-h-screen flex flex-col justify-between">
+
+  <!-- 1. الهيدر (Navbar) -->
+  <header class="bg-white border-b border-gray-200/50 py-4 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-lg border-2 border-brand-gold bg-white flex items-center justify-center p-0.5 shadow-md shadow-brand-gold/10">
+          <img src="./assets/images/logo.png" alt="شعار شركة معيض علي بن معيض القرني التجارية" class="w-full h-full object-contain rounded-md">
+        </div>
+        <div class="flex flex-col">
+          <span class="text-brand-navy font-black text-xs sm:text-sm md:text-base leading-tight tracking-wide">شركة معيض علي بن معيض القرني التجارية</span>
+          <span class="text-[9px] md:text-[10px] text-gray-500 font-bold tracking-wider">فخامة الضيافة وأصالة الاستثمار</span>
+        </div>
+      </a>
+      
+      <a href="index.html" class="px-4 py-2 border border-brand-navy/20 hover:border-brand-navy rounded-xl text-brand-navy hover:bg-brand-navy/5 font-bold text-xs sm:text-sm transition-all flex items-center gap-2">
+        <i class="fa-solid fa-arrow-left rotate-180"></i>
+        <span>العودة للموقع الرئيسي</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- 2. محتوى صفحة الحجز (Booking Content) -->
+  <main class="flex-grow py-12 bg-light-gold-gradient relative z-10 flex items-center justify-center">
+    <div class="max-w-3xl w-full mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- ترويسة الصفحة -->
+      <div class="text-center max-w-xl mx-auto mb-10 flex flex-col items-center gap-2">
+        <span class="text-brand-gold font-bold text-xs md:text-sm tracking-wider uppercase bg-brand-gold/10 px-4 py-1 rounded-full">بوابة الحجز الرقمية</span>
+        <h1 class="text-2xl sm:text-3xl font-black text-brand-navy">استكمال تفاصيل حجز الباقة</h1>
+        <div class="w-12 h-[2.5px] bg-brand-gold mt-1.5 rounded-full"></div>
+        <p class="text-slate-600 text-xs sm:text-sm mt-1 leading-relaxed">
+          يرجى ملء النموذج أدناه ببياناتك الصحيحة. سيتم استخدام هذه البيانات لإصدار مستند الحجز الأولي وتنسيق الدفع.
+        </p>
+      </div>
+
+      <!-- بطاقة النموذج الفخمة -->
+      <div class="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200/50 shadow-xl shadow-slate-100/50">
+        <form id="booking-form" class="flex flex-col gap-6" onsubmit="handleBookingSubmit(event)">
+          
+          <!-- حقل الاسم كامل -->
+          <div class="flex flex-col gap-2">
+            <label for="booking-name" class="text-xs font-bold text-slate-700">الاسم الكامل <span class="text-red-500">*</span></label>
+            <div class="relative">
+              <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-gray-400">
+                <i class="fa-regular fa-user"></i>
+              </div>
+              <input type="text" id="booking-name" required class="w-full pr-10 pl-3 py-3.5 rounded-xl border border-gray-200 focus:outline-none focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 transition-all text-sm" placeholder="أدخل اسمك الكامل">
+            </div>
+          </div>
+
+          <!-- حقل رقم الجوال -->
+          <div class="flex flex-col gap-2">
+            <label for="booking-phone" class="text-xs font-bold text-slate-700">رقم الجوال <span class="text-red-500">*</span></label>
+            <div class="relative">
+              <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-gray-400">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </div>
+              <input type="tel" id="booking-phone" required class="w-full pr-10 pl-3 py-3.5 rounded-xl border border-gray-200 focus:outline-none focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 transition-all text-sm font-mono text-right" placeholder="05xxxxxxxx">
+            </div>
+          </div>
+
+          <!-- حقل اختيار الباقة المعتمدة -->
+          <div class="flex flex-col gap-2">
+            <label for="booking-package" class="text-xs font-bold text-slate-700">الباقة المختارة <span class="text-red-500">*</span></label>
+            <div class="relative">
+              <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-gray-400">
+                <i class="fa-solid fa-gem"></i>
+              </div>
+              <select id="booking-package" required class="w-full pr-10 pl-3 py-3.5 rounded-xl border border-gray-200 focus:outline-none focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 transition-all text-sm text-slate-700 bg-white">
+                <option value="" disabled>اختر باقتك...</option>
+                <option value="باقة الفخامة الملكية (فندق 5 نجوم)">باقة الفخامة الملكية (فندق 5 نجوم) - 75,000 ر.س</option>
+                <option value="باقة التميز الفاخرة (فندق 4 نجوم)">باقة التميز الفاخرة (فندق 4 نجوم) - 70,000 ر.س</option>
+                <option value="باقة الأصالة والأناقة (فندق 3 نجوم)">باقة الأصالة والأناقة (فندق 3 نجوم) - 65,000 ر.س</option>
+                <option value="الباقة الاقتصادية المتميزة (فندق نجمتين)">الباقة الاقتصادية المتميزة (فندق نجمتين) - 60,000 ر.س</option>
+                <option value="الباقة الأساسية الميسرة (فندق نجمة واحدة)">الباقة الأساسية الميسرة (فندق نجمة واحدة) - 55,000 ر.س</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- حقل تاريخ الحجز -->
+          <div class="flex flex-col gap-2">
+            <label for="booking-date" class="text-xs font-bold text-slate-700">تاريخ الحجز المطلوب <span class="text-red-500">*</span></label>
+            <div class="relative">
+              <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-gray-400">
+                <i class="fa-regular fa-calendar-days"></i>
+              </div>
+              <input type="date" id="booking-date" required class="w-full pr-10 pl-3 py-3.5 rounded-xl border border-gray-200 focus:outline-none focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 transition-all text-sm text-right bg-white">
+            </div>
+          </div>
+
+          <!-- تفاصيل إضافية للطلب -->
+          <div class="flex flex-col gap-2">
+            <label for="booking-details" class="text-xs font-bold text-slate-700">تفاصيل الطلب أو ملاحظات خاصة</label>
+            <textarea id="booking-details" rows="3" class="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 transition-all text-sm" placeholder="اكتب أي ملاحظات أو متطلبات خاصة هنا..."></textarea>
+          </div>
+
+          <!-- زر إتمام الدفع الإلكتروني (قريباً) مع تنبيه -->
+          <div class="mt-4 flex flex-col gap-3">
+            <button type="submit" class="w-full py-4 rounded-xl bg-gray-200 border border-gray-300/80 text-gray-500 hover:text-gray-600 font-bold text-center shadow-inner cursor-pointer hover:bg-gray-200/80 hover:border-gray-300 transition-all duration-300 flex items-center justify-center gap-2 group relative">
+              <i class="fa-solid fa-credit-card text-gray-400 group-hover:scale-105 transition-transform"></i>
+              <span>إتمام الدفع الإلكتروني (قريباً)</span>
+              <!-- شارة توضيحية خفيفة -->
+              <span class="absolute top-1/2 -translate-y-1/2 left-4 text-[9px] bg-brand-gold/15 text-brand-gold px-2.5 py-0.5 rounded-full font-bold">معلق مؤقتاً</span>
+            </button>
+            
+            <p class="text-[10px] text-gray-500 text-center leading-relaxed font-bold">
+              <i class="fa-solid fa-lock text-brand-gold/70 ml-1"></i> بوابة الدفع الإلكتروني قيد التفعيل الأمني والفني حالياً مع المصرف لتلبية اشتراطات البنك.
+            </p>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- 3. نافذة التنبيه المخصصة الفاخرة (Custom Bank Activation Modal) -->
+  <div id="payment-modal" class="fixed inset-0 bg-brand-navyDark/65 backdrop-blur-sm z-[100] hidden items-center justify-center p-4 transition-all duration-300 opacity-0">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 border-2 border-brand-gold/40 shadow-2xl overflow-hidden animate-fade-in-up flex flex-col items-center text-center gap-5">
+      
+      <!-- أيقونة المصرف المعلق -->
+      <div class="w-20 h-20 rounded-full bg-brand-gold/10 text-brand-gold flex items-center justify-center text-4xl animate-pulse">
+        <i class="fa-solid fa-building-columns"></i>
+      </div>
+      
+      <div class="flex flex-col gap-2">
+        <h3 class="font-black text-brand-navy text-lg sm:text-xl">بوابة الدفع قيد التفعيل الفني</h3>
+        <div class="w-16 h-[2.5px] bg-brand-gold mx-auto mt-1 rounded-full"></div>
+      </div>
+      
+      <p class="text-slate-800 text-xs sm:text-sm leading-relaxed font-bold">
+        عذراً، بوابة التحصيل والدفع الإلكتروني المباشر تحت التفعيل الفني حالياً مع المصرف لتلبية كامل المعايير والاشتراطات التنظيمية والأمنية.
+      </p>
+      
+      <!-- صندوق معلومات الحجز المسجل -->
+      <div class="w-full bg-brand-bgLight rounded-2xl p-4 border border-gray-200/50 text-right text-xs text-slate-700 flex flex-col gap-2 my-2 font-bold">
+        <div class="border-b border-gray-200 pb-1.5 text-center text-[10px] text-brand-gold uppercase">تفاصيل الحجز المسجل</div>
+        <div><span class="text-gray-400">الاسم:</span> <span id="modal-name"></span></div>
+        <div><span class="text-gray-400">الجوال:</span> <span id="modal-phone"></span></div>
+        <div><span class="text-gray-400">الباقة:</span> <span id="modal-package" class="text-brand-navy"></span></div>
+        <div><span class="text-gray-400">التاريخ:</span> <span id="modal-date" class="font-mono"></span></div>
+      </div>
+      
+      <p class="text-[11px] text-slate-600 leading-normal">
+        لتأكيد حجزك وضمان تفعيل الخدمة فوراً، تم تسهيل إرسال معلومات الحجز مباشرة عبر واتساب لمسؤول المبيعات المعتمد.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-3 w-full mt-2">
+        <!-- زر المتابعة عبر الواتساب لتأكيد الحجز -->
+        <button id="modal-whatsapp-btn" class="flex-grow py-3 px-5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm shadow-md hover:scale-[1.02] transition-all flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>تأكيد الحجز عبر واتساب</span>
+        </button>
+        
+        <!-- زر الإغلاق والعودة -->
+        <button onclick="closePaymentModal()" class="py-3 px-5 rounded-xl border border-gray-200 hover:bg-gray-50 text-slate-600 font-bold text-sm transition-all">
+          إغلاق النافذة
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. التذييل (Footer) -->
+  <footer class="bg-brand-navyDark text-white py-6 border-t border-white/5 text-center text-xs">
+    <p class="font-medium text-gray-400">جميع الحقوق محفوظة © 2026 لشركة معيض علي بن معيض القرني التجارية.</p>
+    <p class="text-[10px] text-gray-500 mt-1">الرقم الوطني الموحد: 7010327133 | مرخص رسميّاً لجميع خدمات الضيافة والتشغيل</p>
+  </footer>
+
+  <!-- تضمين كود الجافا سكربت المطور للموقع -->
+  <script src="./script.js"></script>
+  
+  <script>
+    // التقاط اسم الباقة المارة في الرابط عند تحميل الصفحة
+    document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const selectedPackage = urlParams.get('package');
+        
+        if (selectedPackage) {
+            const selectElement = document.getElementById('booking-package');
+            // البحث عن الخيار الذي يبدأ باسم الباقة وتحديده تلقائياً
+            for (let option of selectElement.options) {
+                if (option.value === selectedPackage || option.value.startsWith(selectedPackage)) {
+                    option.selected = true;
+                    break;
+                }
+            }
+        }
+        
+        // منع تحديد التواريخ السابقة لليوم
+        const dateInput = document.getElementById('booking-date');
+        if (dateInput) {
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.min = today;
+        }
+    });
+
+    // التحكم في المودال الخاص بالدفع البنكي المعلق
+    const paymentModal = document.getElementById('payment-modal');
+    
+    function openPaymentModal(name, phone, packageVal, dateVal) {
+        document.getElementById('modal-name').textContent = name;
+        document.getElementById('modal-phone').textContent = phone;
+        document.getElementById('modal-package').textContent = packageVal;
+        document.getElementById('modal-date').textContent = dateVal;
+        
+        paymentModal.classList.remove('hidden');
+        paymentModal.classList.add('flex');
+        setTimeout(() => {
+            paymentModal.classList.remove('opacity-0');
+        }, 10);
+    }
+    
+    function closePaymentModal() {
+        paymentModal.classList.add('opacity-0');
+        setTimeout(() => {
+            paymentModal.classList.add('hidden');
+            paymentModal.classList.remove('flex');
+        }, 300);
+    }
+
+    // معالجة الضغط على زر تأكيد الحجز وإرساله للواتساب من المودال
+    document.getElementById('modal-whatsapp-btn').addEventListener('click', () => {
+        const name = document.getElementById('modal-name').textContent;
+        const phone = document.getElementById('modal-phone').textContent;
+        const packageVal = document.getElementById('modal-package').textContent;
+        const dateVal = document.getElementById('modal-date').textContent;
+        const details = document.getElementById('booking-details').value.trim();
+        
+        const formattedMessage = `السلام عليكم ورحمة الله وبركاته،
+يوجد طلب حجز باقة معتمد جديد من بوابة الحجز الإلكترونية:
+- الاسم: ${name}
+- الجوال: ${phone}
+- الباقة المختارة: ${packageVal}
+- تاريخ الحجز المطلوب: ${dateVal}
+- تفاصيل إضافية: ${details || 'لا توجد ملاحظات إضافية'}`;
+
+        const encodedText = encodeURIComponent(formattedMessage);
+        const whatsappUrl = `https://wa.me/966555595492?text=${encodedText}`;
+        window.open(whatsappUrl, '_blank');
+        closePaymentModal();
+    });
+
+    // إغلاق المودال عند الضغط على Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && paymentModal && !paymentModal.classList.contains('hidden')) {
+            closePaymentModal();
+        }
+    });
+  </script>
+</body>
+</html>
