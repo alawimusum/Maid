@@ -258,10 +258,283 @@
   </div>
 
   <!-- 4. التذييل (Footer) -->
-  <footer class="bg-brand-navyDark text-white py-6 border-t border-white/5 text-center text-xs">
-    <p class="font-medium text-gray-400">جميع الحقوق محفوظة © 2026 لشركة معيض علي بن معيض القرني التجارية.</p>
-    <p class="text-[10px] text-gray-500 mt-1">الرقم الوطني الموحد: 7010327133 | مرخص رسميّاً لجميع خدمات الضيافة والتشغيل</p>
+  <footer class="bg-brand-navyDark text-white py-10 border-t border-white/5 text-center text-xs">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col items-center gap-4">
+      <div class="flex flex-wrap justify-center items-center gap-3 md:gap-4 font-bold text-white text-xs sm:text-sm mb-2">
+        <a href="javascript:void(0)" id="privacy-policy-btn" class="hover:text-brand-gold transition-colors underline cursor-pointer">سياسة الخصوصية</a>
+        <span class="text-white/30 font-light">|</span>
+        <a href="javascript:void(0)" id="refund-policy-btn" class="hover:text-brand-gold transition-colors underline cursor-pointer">سياسة الاستبدال والاسترجاع</a>
+        <span class="text-white/30 font-light">|</span>
+        <a href="javascript:void(0)" id="terms-btn" class="hover:text-brand-gold transition-colors underline cursor-pointer">الشروط والأحكام</a>
+        <span class="text-white/30 font-light">|</span>
+        <span>الرقم الوطني الموحد: 7010327133</span>
+      </div>
+      <p class="font-medium text-gray-400">جميع الحقوق محفوظة © 2026 لشركة معيض علي بن معيض القرني التجارية.</p>
+    </div>
   </footer>
+
+  <!-- أداة الدعم الفني وتواصل العملاء العائمة (Floating Support Widget) -->
+  <div class="fixed bottom-6 right-6 z-50 font-cairo">
+    <!-- صندوق الدعم المنبثق -->
+    <div id="support-panel" class="hidden opacity-0 translate-y-4 fixed bottom-20 right-6 w-[320px] max-w-[calc(100vw-3rem)] bg-white rounded-2xl border-2 border-brand-gold/30 shadow-2xl flex-col overflow-hidden transition-all duration-300 z-50">
+      <!-- رأس صندوق الدعم -->
+      <div class="bg-brand-navy text-white p-4 flex items-center justify-between border-b border-brand-gold/20">
+        <div class="flex items-center gap-3">
+          <div class="relative w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-brand-gold">
+            <i class="fa-solid fa-headset text-base"></i>
+            <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-500 rounded-full border-2 border-brand-navy animate-pulse"></span>
+          </div>
+          <div class="flex flex-col text-right">
+            <span class="font-bold text-xs text-white">الدعم الفني والعملاء</span>
+            <span class="text-[9px] text-emerald-400 font-medium">متصل الآن - كيف يمكننا مساعدتك؟</span>
+          </div>
+        </div>
+        <button id="close-support-btn" class="text-gray-400 hover:text-brand-gold text-base focus:outline-none" aria-label="إغلاق">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <!-- محتوى خيارات الدعم -->
+      <div class="p-4 flex flex-col gap-3 text-right">
+        <p class="text-xs text-gray-600 leading-relaxed mb-1">يسعدنا تواصلك معنا مباشرة عبر قنوات الاتصال الرسمية المتاحة على مدار الساعة:</p>
+        
+        <!-- خيار 1: واتساب الدعم الفني -->
+        <a href="https://wa.me/966555595492?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A7%D9%84%D8%AF%D8%B9%D9%85%20%D8%A7%D9%84%D9%81%D9%86%D9%8A%20%D9%84%D8%B4%D8%B1%D9%83%D8%A9%20%D9%85%D8%B9%D9%8A%D8%B6%20%D8%A7%D9%84%D9%82%D8%B1%D9%86%D9%8A%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20" target="_blank" class="flex items-center justify-between p-3 rounded-xl bg-emerald-50 hover:bg-emerald-100/80 border border-emerald-200 text-emerald-900 transition-colors group">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-emerald-500 text-white flex items-center justify-center text-lg shadow-sm group-hover:scale-105 transition-transform"><i class="fa-brands fa-whatsapp"></i></span>
+            <div class="flex flex-col">
+              <span class="text-xs font-bold">محادثة واتساب مباشرة</span>
+              <span class="text-[9px] text-emerald-700/80 font-light">استجابة فورية وحلول سريعة</span>
+            </div>
+          </div>
+          <i class="fa-solid fa-angle-left text-emerald-400 group-hover:translate-x-[-2px] transition-transform"></i>
+        </a>
+
+        <!-- خيار 2: اتصال هاتفي -->
+        <a href="tel:0555595492" class="flex items-center justify-between p-3 rounded-xl bg-brand-navy/5 hover:bg-brand-navy/10 border border-brand-navy/10 text-brand-navy transition-colors group">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-brand-navy text-white flex items-center justify-center text-sm shadow-sm group-hover:scale-105 transition-transform"><i class="fa-solid fa-phone text-brand-gold"></i></span>
+            <div class="flex flex-col">
+              <span class="text-xs font-bold">اتصال هاتفي مباشر</span>
+              <span class="text-[9px] text-gray-500 font-light">تحدث مع أحد ممثلي الخدمة</span>
+            </div>
+          </div>
+          <i class="fa-solid fa-angle-left text-brand-navy/40 group-hover:translate-x-[-2px] transition-transform"></i>
+        </a>
+
+        <!-- خيار 3: بريد إلكتروني -->
+        <a href="mailto:bibo335@gmail.com?subject=Support%20Inquiry" class="flex items-center justify-between p-3 rounded-xl bg-gray-50 hover:bg-gray-100 border border-gray-200 text-slate-800 transition-colors group">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-gray-500 text-white flex items-center justify-center text-sm shadow-sm group-hover:scale-105 transition-transform"><i class="fa-solid fa-envelope"></i></span>
+            <div class="flex flex-col">
+              <span class="text-xs font-bold">إرسال بريد إلكتروني</span>
+              <span class="text-[9px] text-gray-500 font-light">للاقتراحات والمراسلات الرسمية</span>
+            </div>
+          </div>
+          <i class="fa-solid fa-angle-left text-gray-400 group-hover:translate-x-[-2px] transition-transform"></i>
+        </a>
+
+        <!-- خيار 4: فتح تذكرة دعم واستفسار -->
+        <button id="support-action-ticket" class="w-full flex items-center justify-between p-3 rounded-xl bg-amber-50 hover:bg-amber-100/80 border border-amber-200 text-amber-900 transition-colors group">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-brand-gold text-white flex items-center justify-center text-sm shadow-sm group-hover:scale-105 transition-transform"><i class="fa-solid fa-ticket"></i></span>
+            <div class="flex flex-col">
+              <span class="text-xs font-bold text-slate-800">تعبئة طلب خدمة ودعم</span>
+              <span class="text-[9px] text-amber-700/80 font-light">نموذج حجز مباشر في الصفحة</span>
+            </div>
+          </div>
+          <i class="fa-solid fa-angle-left text-amber-400 group-hover:translate-x-[-2px] transition-transform"></i>
+        </button>
+      </div>
+      <!-- تذييل صندوق الدعم -->
+      <div class="bg-gray-50 px-4 py-2.5 text-center border-t border-gray-100 text-[10px] text-gray-400 font-medium">
+        نسعد بخدمتكم دائماً في شركة معيض القرني
+      </div>
+    </div>
+
+    <!-- الزر العائم الدائري النابض -->
+    <button id="support-widget-btn" class="w-14 h-14 rounded-full bg-gold-gradient text-white flex items-center justify-center shadow-2xl shadow-brand-gold/30 hover:scale-110 transition-all duration-300 relative group" aria-label="الدعم الفني وتواصل العملاء">
+      <span class="absolute inset-0 rounded-full bg-brand-gold/40 animate-ping -z-10 group-hover:animate-none opacity-70"></span>
+      <i class="fa-solid fa-headset text-2xl"></i>
+    </button>
+  </div>
+
+  <!-- نافذة منبثقة لسياسة الخصوصية (Privacy Policy Modal) -->
+  <div id="privacy-modal" class="fixed inset-0 bg-brand-navyDark/60 backdrop-blur-sm z-[100] hidden items-center justify-center p-4 transition-all duration-300 opacity-0">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[80vh] flex flex-col border-2 border-brand-gold/30 shadow-2xl overflow-hidden animate-fade-in-up">
+      <!-- رأس المودال -->
+      <div class="bg-brand-navy text-white px-6 py-4 flex items-center justify-between border-b border-brand-gold/20">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-user-shield text-brand-gold text-lg"></i>
+          <h3 class="font-bold text-sm md:text-base text-white">سياسة الخصوصية – شركة معيض علي بن معيض القرني التجارية</h3>
+        </div>
+        <button id="close-privacy-modal-x" class="text-gray-400 hover:text-brand-gold text-lg focus:outline-none" aria-label="إغلاق">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <!-- محتوى المودال (قابل للتمرير) -->
+      <div class="p-6 md:p-8 overflow-y-auto text-right text-slate-700 text-xs md:text-sm leading-relaxed space-y-4 font-bold">
+        <div class="text-brand-gold text-xs font-bold border-b border-gray-100 pb-2">تاريخ السريان: 21 يونيو 2026</div>
+        <p>
+          شركة معيض علي بن معيض القرني التجارية تحترم خصوصيتك وتلتزم بحماية بياناتك الشخصية عند استخدامك لموقعنا أو خدماتنا. توضح هذه الصفحة كيفية جمع واستخدام وحماية معلوماتك، وحقوقك المتعلقة بها.
+        </p>
+
+        <h4 class="text-brand-navy font-black text-sm border-r-2 border-brand-gold pr-2 mt-4">1. المعلومات التي نجمعها</h4>
+        <p>قد نقوم بجمع البيانات التالية اختياريّاً عند تعبئة نموذج الحجز:</p>
+        <ul class="list-disc list-inside pr-4 space-y-1">
+          <li>الاسم الكامل.</li>
+          <li>رقم الجوال للتواصل.</li>
+          <li>نوع الخدمة المطلوبة (حجز فندقي وسكن / حجز قاعة مناسبات / خدمات المقاولات والصيانة).</li>
+          <li>أي تفاصيل إضافية تكتبها في نص الرسالة.</li>
+        </ul>
+
+        <h4 class="text-brand-navy font-black text-sm border-r-2 border-brand-gold pr-2 mt-4">2. استخدام المعلومات</h4>
+        <p>نستخدم بياناتك فقط للأغراض التالية:</p>
+        <ul class="list-disc list-inside pr-4 space-y-1">
+          <li>التواصل معك بشأن الحجوزات، والخدمات، والاستفسارات المقدمة من طرفك.</li>
+          <li>تنسيق طلبات الإقامة الفندقية أو حجز قاعات الأفراح والمناسبات الفاخرة.</li>
+          <li>الامتثال للقوانين واللوائح المعمول بها في المملكة العربية السعودية.</li>
+        </ul>
+
+        <h4 class="text-brand-navy font-black text-sm border-r-2 border-brand-gold pr-2 mt-4">3. مشاركة المعلومات مع الغير</h4>
+        <p>
+          نحن لا نبيع، ولا نؤجر، ولا نشارك بياناتك الشخصية مع أي طرف ثالث لأغراض تجارية مطلقاً. قد نشارك معلوماتك فقط إذا كان ذلك مطلوبًا بموجب الأنظمة والقوانين الرسمية.
+        </p>
+
+        <h4 class="text-brand-navy font-black text-sm border-r-2 border-brand-gold pr-2 mt-4">4. حماية البيانات</h4>
+        <p>
+          نطبق تدائير أمنية تقنية وتنظيمية لحماية بياناتك من الوصول غير المصرح به، أو التعديل، أو الكشف، أو الحذف، لضمان تجربة تصفح وحجز آمنة بالكامل.
+        </p>
+
+        <h4 class="text-brand-navy font-black text-sm border-r-2 border-brand-gold pr-2 mt-4">5. حقوقك</h4>
+        <p>لك الحق في:</p>
+        <ul class="list-disc list-inside pr-4 space-y-1">
+          <li>الوصول إلى بياناتك الشخصية التي شاركتها معنا.</li>
+          <li>طلب تصحيح أو تحديث معلوماتك.</li>
+          <li>طلب حذف بياناتك من سجلات التواصل لدينا.</li>
+        </ul>
+        <p class="mt-2">
+          لممارسة حقوقك أو للاستفسار، يمكنك التواصل معنا مباشرة عبر:<br>
+          البريد الإلكتروني: <a href="mailto:bibo335@gmail.com" class="text-brand-gold hover:underline font-mono">bibo335@gmail.com</a><br>
+          الهاتف: <a href="tel:0555595492" class="text-brand-gold hover:underline font-mono">0555595492</a>
+        </p>
+
+        <h4 class="text-brand-navy font-black text-sm border-r-2 border-brand-gold pr-2 mt-4">6. التغييرات على سياسة الخصوصية</h4>
+        <p>
+          قد نقوم بتحديث هذه السياسة من وقت لآخر لمواكبة التحديثات التنظيمية، وسيتم نشر أي تغييرات مباشرة على هذه الصفحة.
+        </p>
+      </div>
+      <!-- أسفل المودال (الزر) -->
+      <div class="bg-gray-50 px-6 py-4 flex justify-end border-t border-gray-100">
+        <button id="close-privacy-modal-btn" class="px-6 py-2 bg-brand-navy hover:bg-brand-navy/90 text-white font-bold rounded-lg text-sm transition-all focus:outline-none">
+          إغلاق
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة منبثقة لسياسة الاستبدال والاسترجاع (Refund Policy Modal) -->
+  <div id="refund-modal" class="fixed inset-0 bg-brand-navyDark/60 backdrop-blur-sm z-[100] hidden items-center justify-center p-4 transition-all duration-300 opacity-0">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[80vh] flex flex-col border-2 border-brand-gold/30 shadow-2xl overflow-hidden animate-fade-in-up">
+      <!-- رأس المودال -->
+      <div class="bg-brand-navy text-white px-6 py-4 flex items-center justify-between border-b border-brand-gold/20">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-rotate-left text-brand-gold text-lg"></i>
+          <h3 class="font-bold text-sm md:text-base text-white">سياسة الاستبدال والاسترجاع والإلغاء</h3>
+        </div>
+        <button id="close-refund-modal-x" class="text-gray-400 hover:text-brand-gold text-lg focus:outline-none" aria-label="إغلاق">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <!-- محتوى المودال (قابل للتمرير) -->
+      <div class="p-6 md:p-8 overflow-y-auto text-right text-slate-700 text-xs md:text-sm leading-relaxed space-y-4 font-bold">
+        <div class="text-brand-gold text-xs font-bold border-b border-gray-100 pb-2">تاريخ السريان: 21 يونيو 2026</div>
+        <p>
+          نحن في شركة معيض علي بن معيض القرني التجارية نسعى دائماً لتقديم خدمات ضيافة ومناسبات ومقاولات متكاملة ومرنة. توضح هذه الصفحة شروط وسياسة إلغاء الحجوزات أو استبدالها واسترجاع المبالغ.
+        </p>
+
+        <h4 class="text-brand-navy font-black text-sm border-r-2 border-brand-gold pr-2 mt-4">1. حجوزات الفنادق والوحدات السكنية</h4>
+        <ul class="list-disc list-inside pr-4 space-y-1">
+          <li><strong>الإلغاء والاسترجاع الكامل:</strong> يمكن للعميل إلغاء الحجز الفندقي واسترداد كامل المبلغ المدفوع مجاناً قبل (48 ساعة) أو أكثر من موعد الدخول المحدّد.</li>
+          <li><strong>الإلغاء المتأخر:</strong> في حال إلغاء الحجز خلال أقل من (48 ساعة) من موعد الدخول، يتم خصم قيمة 50% من إجمالي الحجز كرسوم إلغاء، أو يتاح للعميل إعادة جدولة الحجز وتغيير التواريخ مجاناً لمرة واحدة فقط خلال (3 أشهر) وبحسب التوفر.</li>
+          <li><strong>عدم الحضور (No-Show):</strong> في حال عدم حضور العميل دون إشعار مسبق، تُخصم كامل القيمة ولا يحق له المطالبة بأي مبالغ مستردة.</li>
+        </ul>
+
+        <h4 class="text-brand-navy font-black text-sm border-r-2 border-brand-gold pr-2 mt-4">2. حجوزات صالات وقصور الأفراح والمناسبات</h4>
+        <ul class="list-disc list-inside pr-4 space-y-1">
+          <li><strong>الإلغاء المبكر (30 يوماً أو أكثر):</strong> في حال إلغاء الحجز قبل 30 يوماً أو أكثر من موعد المناسبة، يسترد العميل عربون الحجز كاملاً.</li>
+          <li><strong>الإلغاء المتوسط (من 15 إلى 29 يوماً):</strong> في حال إلغاء الحجز خلال هذه الفترة، يسترد العميل 50% من قيمة عربون الحجز.</li>
+          <li><strong>الإلغاء المتأخر (أقل من 15 يوماً):</strong> في حال الإلغاء قبل أقل من 15 يوماً من موعد المناسبة، يكون العربون غير مسترد بالكامل، ولكن يتاح للعميل تأجيل موعد المناسبة لمرة واحدة خلال نفس العام (حسب التوفر وأسعار المواسم المعتمدة).</li>
+        </ul>
+
+        <h4 class="text-brand-navy font-black text-sm border-r-2 border-brand-gold pr-2 mt-4">3. خدمات المقاولات والصيانة العامة</h4>
+        <p>
+          تخضع خدمات المقاولات، الترميم، وإدارة المرافق لبنود وشروط "عقد تقديم الخدمات المبرم ثنائياً" والموقّع رسمياً بين الشركة والعميل، وتُحدد شروط الدفع، الإلغاء، أو التعديل وفقاً لكل اتفاقية ومراحل الإنجاز.
+        </p>
+
+        <h4 class="text-brand-navy font-black text-sm border-r-2 border-brand-gold pr-2 mt-4">4. آلية تحويل المبالغ المستردة</h4>
+        <p>
+          تتم معالجة جميع عمليات الاسترجاع القانونية وتحويل المبالغ لحساب العميل البنكي (نفس الحساب الذي تم السداد منه) خلال فترة تتراوح بين 7 إلى 14 يوم عمل من تاريخ الموافقة الرسمية على الإلغاء.
+        </p>
+      </div>
+      <!-- أسفل المودال (الزر) -->
+      <div class="bg-gray-50 px-6 py-4 flex justify-end border-t border-gray-100">
+        <button id="close-refund-modal-btn" class="px-6 py-2 bg-brand-navy hover:bg-brand-navy/90 text-white font-bold rounded-lg text-sm transition-all focus:outline-none">
+          إغلاق
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة منبثقة للشروط والأحكام (Terms & Conditions Modal) -->
+  <div id="terms-modal" class="fixed inset-0 bg-brand-navyDark/60 backdrop-blur-sm z-[100] hidden items-center justify-center p-4 transition-all duration-300 opacity-0">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[80vh] flex flex-col border-2 border-brand-gold/30 shadow-2xl overflow-hidden animate-fade-in-up">
+      <!-- رأس المودال -->
+      <div class="bg-brand-navy text-white px-6 py-4 flex items-center justify-between border-b border-brand-gold/20">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-file-contract text-brand-gold text-lg"></i>
+          <h3 class="font-bold text-sm md:text-base text-white">الشروط والأحكام الرسمية</h3>
+        </div>
+        <button id="close-terms-modal-x" class="text-gray-400 hover:text-brand-gold text-lg focus:outline-none" aria-label="إغلاق">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <!-- محتوى المودال (قابل للتمرير) -->
+      <div class="p-6 md:p-8 overflow-y-auto text-right text-slate-700 text-xs md:text-sm leading-relaxed space-y-4 font-bold">
+        <div class="text-brand-gold text-xs font-bold border-b border-gray-100 pb-2">تاريخ التحديث: 21 يونيو 2026</div>
+        <p>
+          أهلاً بك في الموقع الرسمي لشركة معيض علي بن معيض القرني التجارية. يرجى قراءة هذه الشروط والأحكام بعناية قبل استخدام موقعنا أو حجز خدماتنا الفندقية والسكنية وصالات المناسبات والمقاولات. استخدامك للموقع يمثل موافقة صريحة منك على الالتزام بهذه الشروط.
+        </p>
+
+        <h4 class="text-brand-navy font-black text-sm border-r-2 border-brand-gold pr-2 mt-4">1. متطلبات الحجز وصحة البيانات</h4>
+        <ul class="list-disc list-inside pr-4 space-y-1">
+          <li>يجب على العميل تقديم معلومات دقيقة وصحيحة بالكامل عند ملء نماذج الحجز أو الاتصال، ويشمل ذلك الاسم، رقم الهاتف، والتواريخ المطلوبة.</li>
+          <li>أي حجز يتم عبر الموقع الإلكتروني يعتبر طلباً مبدئياً وغير مؤكد رسمياً إلا بعد مراجعة خدمة العملاء والتواصل معك لتنسيق السداد أو تحصيل العربون وتأكيد التوفر.</li>
+        </ul>
+
+        <h4 class="text-brand-navy font-black text-sm border-r-2 border-brand-gold pr-2 mt-4">2. قواعد استخدام المرافق والسلوك</h4>
+        <ul class="list-disc list-inside pr-4 space-y-1">
+          <li><strong>المحافظة على الممتلكات:</strong> يلتزم العميل وضيوفه الكرام بالمحافظة التامة على الأثاث، والمعدات، والديكورات داخل الغرف الفندقية أو صالات وقصور الأفراح أثناء فترة الاستخدام. وفي حال حدوث أي تلفيات مادية ناتجة عن سوء الاستخدام، يتحمل العميل تكلفة الإصلاح أو التعويض كاملة.</li>
+          <li><strong>الأمتعة الشخصية:</strong> تخلي الشركة مسؤوليتها القانونية عن أي ضياع أو سرقة للمقتنيات الشخصية أو المجوهرات والأموال الخاصة بالعميل وضيوفه داخل المرافق، وننصح دائماً بحفظ الأشياء الثمينة في الخزنات المخصصة للأمانات.</li>
+        </ul>
+
+        <h4 class="text-brand-navy font-black text-sm border-r-2 border-brand-gold pr-2 mt-4">3. الملكية الفكرية وحقوق النشر</h4>
+        <p>
+          جميع محتويات هذا الموقع من نصوص، صور، تصاميم، شعارات، ورموز، هي ملكية فكرية حصرية لشركة معيض علي بن معيض القرني التجارية ومحمية بقوانين حماية حقوق الملكية الفكرية السارية في المملكة العربية السعودية. يُمنع منعاً باتاً نسخ أو استخدام أي جزء منها لأغراض تجارية دون إذن كتابي رسمي مسبق.
+        </p>
+
+        <h4 class="text-brand-navy font-black text-sm border-r-2 border-brand-gold pr-2 mt-4">4. القانون الحاكم والأنظمة السارية</h4>
+        <p>
+          تخضع هذه الشروط والأحكام وتُفسر وتُطبق وفقاً للأنظمة واللوائح والتعليمات القانونية المعمول بها في المملكة العربية السعودية، وتختص المحاكم السعودية بمدينة الرياض بالنظر في أي نزاع قد ينشأ بخصوصها.
+        </p>
+      </div>
+      <!-- أسفل المودال (الزر) -->
+      <div class="bg-gray-50 px-6 py-4 flex justify-end border-t border-gray-100">
+        <button id="close-terms-modal-btn" class="px-6 py-2 bg-brand-navy hover:bg-brand-navy/90 text-white font-bold rounded-lg text-sm transition-all focus:outline-none">
+          إغلاق
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- تضمين كود الجافا سكربت المطور للموقع -->
   <script src="./script.js"></script>

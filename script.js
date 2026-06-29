@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closePrivacyModalX = document.getElementById('close-privacy-modal-x');
 
     function openPrivacyModal() {
-        // Make sure modal has correct z-index above everything
+        if (!privacyModal) return;
         privacyModal.classList.remove('hidden');
         privacyModal.classList.add('flex');
         setTimeout(() => {
@@ -125,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function closePrivacyModal() {
+        if (!privacyModal) return;
         privacyModal.classList.add('opacity-0');
         setTimeout(() => {
             privacyModal.classList.add('hidden');
@@ -144,8 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (closePrivacyModalX) {
         closePrivacyModalX.addEventListener('click', closePrivacyModal);
     }
-
-    // إغلاق المودال عند النقر على الخلفية الشبه شفافة
     if (privacyModal) {
         privacyModal.addEventListener('click', (e) => {
             if (e.target === privacyModal) {
@@ -154,10 +153,187 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // إغلاق المودال عند الضغط على زر Escape في لوحة المفاتيح
+    // 3.6. نافذة سياسة الاستبدال والاسترجاع المنبثقة (Refund Policy Modal Logic)
+    const refundModal = document.getElementById('refund-modal');
+    const refundPolicyBtn = document.getElementById('refund-policy-btn');
+    const refundPolicyQuickLink = document.getElementById('refund-policy-quicklink');
+    const closeRefundModalBtn = document.getElementById('close-refund-modal-btn');
+    const closeRefundModalX = document.getElementById('close-refund-modal-x');
+
+    function openRefundModal() {
+        if (!refundModal) return;
+        refundModal.classList.remove('hidden');
+        refundModal.classList.add('flex');
+        setTimeout(() => {
+            refundModal.classList.remove('opacity-0');
+        }, 10);
+    }
+
+    function closeRefundModal() {
+        if (!refundModal) return;
+        refundModal.classList.add('opacity-0');
+        setTimeout(() => {
+            refundModal.classList.add('hidden');
+            refundModal.classList.remove('flex');
+        }, 300);
+    }
+
+    if (refundPolicyBtn) {
+        refundPolicyBtn.addEventListener('click', openRefundModal);
+    }
+    if (refundPolicyQuickLink) {
+        refundPolicyQuickLink.addEventListener('click', openRefundModal);
+    }
+    if (closeRefundModalBtn) {
+        closeRefundModalBtn.addEventListener('click', closeRefundModal);
+    }
+    if (closeRefundModalX) {
+        closeRefundModalX.addEventListener('click', closeRefundModal);
+    }
+    if (refundModal) {
+        refundModal.addEventListener('click', (e) => {
+            if (e.target === refundModal) {
+                closeRefundModal();
+            }
+        });
+    }
+
+    // 3.7. نافذة الشروط والأحكام المنبثقة (Terms & Conditions Modal Logic)
+    const termsModal = document.getElementById('terms-modal');
+    const termsBtn = document.getElementById('terms-btn');
+    const termsQuickLink = document.getElementById('terms-quicklink');
+    const closeTermsModalBtn = document.getElementById('close-terms-modal-btn');
+    const closeTermsModalX = document.getElementById('close-terms-modal-x');
+
+    function openTermsModal() {
+        if (!termsModal) return;
+        termsModal.classList.remove('hidden');
+        termsModal.classList.add('flex');
+        setTimeout(() => {
+            termsModal.classList.remove('opacity-0');
+        }, 10);
+    }
+
+    function closeTermsModal() {
+        if (!termsModal) return;
+        termsModal.classList.add('opacity-0');
+        setTimeout(() => {
+            termsModal.classList.add('hidden');
+            termsModal.classList.remove('flex');
+        }, 300);
+    }
+
+    if (termsBtn) {
+        termsBtn.addEventListener('click', openTermsModal);
+    }
+    if (termsQuickLink) {
+        termsQuickLink.addEventListener('click', openTermsModal);
+    }
+    if (closeTermsModalBtn) {
+        closeTermsModalBtn.addEventListener('click', closeTermsModal);
+    }
+    if (closeTermsModalX) {
+        closeTermsModalX.addEventListener('click', closeTermsModal);
+    }
+    if (termsModal) {
+        termsModal.addEventListener('click', (e) => {
+            if (e.target === termsModal) {
+                closeTermsModal();
+            }
+        });
+    }
+
+    // 3.8. أداة الدعم الفني العائمة وتواصل العملاء (Floating Support Widget Logic)
+    const supportWidgetBtn = document.getElementById('support-widget-btn');
+    const supportPanel = document.getElementById('support-panel');
+    const closeSupportBtn = document.getElementById('close-support-btn');
+    const supportActionTicket = document.getElementById('support-action-ticket');
+
+    function toggleSupportPanel() {
+        if (!supportPanel) return;
+        const isHidden = supportPanel.classList.contains('hidden');
+        if (isHidden) {
+            supportPanel.classList.remove('hidden');
+            supportPanel.classList.add('flex');
+            setTimeout(() => {
+                supportPanel.classList.remove('opacity-0', 'translate-y-4');
+            }, 10);
+        } else {
+            closeSupportPanel();
+        }
+    }
+
+    function closeSupportPanel() {
+        if (!supportPanel) return;
+        supportPanel.classList.add('opacity-0', 'translate-y-4');
+        setTimeout(() => {
+            supportPanel.classList.add('hidden');
+            supportPanel.classList.remove('flex');
+        }, 300);
+    }
+
+    if (supportWidgetBtn) {
+        supportWidgetBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleSupportPanel();
+        });
+    }
+
+    if (closeSupportBtn) {
+        closeSupportBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeSupportPanel();
+        });
+    }
+
+    if (supportPanel) {
+        supportPanel.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    }
+
+    document.addEventListener('click', () => {
+        closeSupportPanel();
+    });
+
+    if (supportActionTicket) {
+        supportActionTicket.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            closeSupportPanel();
+
+            const contactSection = document.getElementById('booking-contact');
+            const formName = document.getElementById('form-name');
+            const bookingForm = document.getElementById('booking-form');
+            const bookingName = document.getElementById('booking-name');
+
+            if (contactSection && formName) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+                setTimeout(() => {
+                    formName.focus();
+                }, 800);
+            } else if (bookingForm && bookingName) {
+                bookingForm.scrollIntoView({ behavior: 'smooth' });
+                setTimeout(() => {
+                    bookingName.focus();
+                }, 800);
+            }
+        });
+    }
+
+    // إغلاق أي نافذة مفتوحة أو صندوق دعم عند الضغط على Escape
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && privacyModal && !privacyModal.classList.contains('hidden')) {
-            closePrivacyModal();
+        if (e.key === 'Escape') {
+            if (privacyModal && !privacyModal.classList.contains('hidden')) {
+                closePrivacyModal();
+            }
+            if (refundModal && !refundModal.classList.contains('hidden')) {
+                closeRefundModal();
+            }
+            if (termsModal && !termsModal.classList.contains('hidden')) {
+                closeTermsModal();
+            }
+            closeSupportPanel();
         }
     });
 });
